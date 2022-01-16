@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- leaflet css file -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div>
+        <img class="logo" src="earth_olinewebfont.svg" />
+        <a class="credit" href="http://www.onlinewebfonts.com"
+          >online Web Fonts</a
+        >
+      </div>
+      <p class="sidebar__text">
+        Following the Udemy courses of
+        <a href="https://www.udemy.com/course/the-complete-javascript-course/"
+          >Jonas Schmedtmann</a
+        >, I created this very simple single page application, to practice
+        fetching data from various web API such as Leaflet for the map,
+        LocationIQ for the reverse geocoding or Restcountries.com to get data on
+        a specific location.
+      </p>
+      <div class="container__country--card hidden"></div>
+    </div>
+    <div class="container__central">
+      <h1 class="title">Reverse Geocoding and third-party API</h1>
+      <div class="container_map" id="map"></div>
+    </div>
+    <div class="container__forms">
+      <form class="form form__country--city">
+        <div class="container__inputs">
+          <label class="labels label__cntry--cty label--country">Country</label>
+          <input class="inputs input--country" type="text" />
+          <!-- <label class="labels label__cntry--cty label--city">City</label>
+          <input class="inputs input--city" type="text" /> -->
+        </div>
+        <button class="form__btn btn__sub--cc" type="submit">Find me</button>
+      </form>
+      <form class="form form__lat--lng">
+        <div class="container__inputs">
+          <label class="labels label__lat--lng label--latitude">Latitude</label>
+          <input class="inputs input--latitude" type="text" />
+          <label class="labels label__lat--lng label--longitude"
+            >Longitude</label
+          >
+          <input class="inputs input--longitude" type="text" />
+        </div>
+        <button class="form__btn btn__sub--ll" type="submit">Find me</button>
+      </form>
+    </div>
+    <div class="modal hidden"></div>
+  </body>
+</html>
